@@ -8,7 +8,7 @@
   </head>
   <body ng-app="main" ng-controller="mainController">
     <h1>MineSweeppppppeeeeeerrrrrr</h1>
-    <button onclick="reset()">New Game!</button>
+    <button onclick="reset()"><img src="./images/smile.png" height=40px width=40px> </button>
       <table border="1">
         <tr ng-repeat="row in minefield.rows">
           <td ng-repeat="spot in row.spots"  ng-click="spot.isCovered = false">
