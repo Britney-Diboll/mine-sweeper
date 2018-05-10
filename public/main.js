@@ -1,15 +1,15 @@
-function createMinefield() {
+function createGrid() {
   var minefield = {};
   minefield.rows = [];
   
   for(var i = 0; i < 9; i++) {
       var row = {};
-      row.spots = [];
+      row.squares = [];
       
       for(var j = 0; j < 9; j++) {
-          var spot = {};
-          spot.isCovered = true;
-          row.spots.push(spot);
+          var square = {};
+          square.covered = true;
+          row.squares.push(square);
       }
       
       minefield.rows.push(row);
@@ -21,7 +21,7 @@ function createMinefield() {
 angular
   .module("main", [])
   .controller("mainController", ($scope) => {
-    $scope.minefield = createMinefield();
+    $scope.minefield = createGrid();
   }
 )
 
