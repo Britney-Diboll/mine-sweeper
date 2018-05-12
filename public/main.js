@@ -16,7 +16,6 @@ function createGrid() {
       minefield.rows.push(row);
   }  
   placeMines(minefield); 
-  
   return minefield;  
 }
 

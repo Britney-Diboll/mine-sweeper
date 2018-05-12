@@ -15,7 +15,7 @@
    
       <table border="2">
         <tr ng-repeat="row in minefield.rows">
-          <td ng-repeat="square in row.squares"  ng-click="square.covered = false">
+          <td ng-repeat="square in row.squares" ng-click="square.covered = false">
             <!-- {{square.covered}} -->
             <img ng-if="square.covered" src="./images/unclicked.png">
 
