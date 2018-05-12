@@ -15,7 +15,7 @@ function createGrid() {
       
       minefield.rows.push(row);
   }  
-  placeAllMines(minefield); 
+  placeMines(minefield); 
   
   return minefield;  
 }
@@ -25,17 +25,14 @@ const  chooseSquare = (minefield, row, column) => {
 }
 
 const placeMines = (minefield) => {
+  for (var i = 0; i < 10; i++){
   var row = Math.round(Math.random() * 8);
   var column = Math.round(Math.random() * 8);
   var square = chooseSquare(minefield, row, column);
   square.bomb = true;
-}
-
-const  placeAllMines = (minefield) => {
-  for(var i = 0; i < 10; i++) {
-      placeMines(minefield);
   }
 }
+
 
 angular
   .module("main", [])
